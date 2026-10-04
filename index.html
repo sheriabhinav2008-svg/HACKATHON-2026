@@ -1,1 +1,81 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Placement Coach</title><link rel="stylesheet" href="style.css"></head><body><header><b>🎯 AI Placement Coach</b><nav><a href="#practice">Practice</a><a href="#interview">Interview</a></nav></header><main><section class="hero"><div><small>AI-POWERED PLACEMENT PREP</small><h1>Crack your placement with a smarter coach.</h1><p>Practice aptitude, DSA, DBMS, OOP and HR interviews in one focused workspace.</p><a class="btn" href="#practice">Start Practice</a></div><div class="card"><div class="robot">🤖</div><h3>Today's Focus</h3><p>DSA • OOP • HR</p><div class="bar"><i id="bar"></i></div><small><span id="progress">0</span>% weekly goal</small></div></section><section class="stats"><div><b id="solved">0</b><span>Solved</span></div><div><b id="accuracy">0%</b><span>Accuracy</span></div><div><b>🔥 1</b><span>Day streak</span></div><div><b>8</b><span>Core topics</span></div></section><section id="practice"><h2>Practice Arena</h2><div class="topics"><button data-topic="Aptitude">🧮<b>Aptitude</b><small>Quantitative & verbal</small></button><button data-topic="DSA">💻<b>DSA</b><small>Algorithms & data structures</small></button><button data-topic="DBMS">🗄️<b>DBMS</b><small>SQL & database concepts</small></button><button data-topic="OOP">🧩<b>OOP</b><small>Java concepts</small></button></div><div class="card question"><span id="tag">Choose a topic</span><h3 id="question">Select a topic to begin.</h3><div id="options"></div><button id="next" class="btn" hidden>Next</button><p id="feedback"></p></div></section><section id="interview"><h2>AI Interview Coach</h2><div class="card"><div id="chat"><p class="bubble">Hi! I'm your placement coach. Choose Java, DSA or HR to start.</p></div><div class="prompts"><button data-p="Java">Java</button><button data-p="DSA">DSA</button><button data-p="HR">HR</button></div><form id="form"><input id="input" placeholder="Type your answer or ask a question"><button class="btn">Send</button></form></div></section></main><footer>HACKATHON-2026 • AI Placement Coach</footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Placement Coach - practice, interview and track placement readiness.">
+<title>AI Placement Coach | HACKATHON-2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">✦</span><span>AI Placement Coach</span></a>
+  <nav><a href="#features">Features</a><a href="#practice">Practice</a><a href="#interview">Interview</a><a href="#how">How it works</a></nav>
+  <a class="nav-cta" href="#practice">Start Prep →</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> HACKATHON-2026 · DEMO MODE</div>
+    <h1>Your <span>AI-powered</span><br>placement coach.</h1>
+    <p class="hero-text">One focused workspace to practice aptitude, DSA, DBMS and OOP, simulate interviews, and understand exactly where you need to improve.</p>
+    <div class="hero-actions"><a class="primary" href="#practice">Start practicing</a><a class="secondary" href="#how">See how it works ↓</a></div>
+    <div class="trust-row"><span>✓ Instant feedback</span><span>✓ Progress tracking</span><span>✓ Interview practice</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="glow"></div>
+    <div class="coach-card">
+      <div class="coach-head"><div class="avatar">AI</div><div><b>Placement Readiness</b><small>Live demo dashboard</small></div><span class="live">LIVE</span></div>
+      <div class="score"><div><small>Overall score</small><strong id="readiness">42%</strong></div><div class="ring"><span>AI</span></div></div>
+      <div class="mini-grid"><div><span>Questions</span><b id="solvedHero">0</b></div><div><span>Accuracy</span><b id="accuracyHero">0%</b></div><div><span>Streak</span><b>1 day</b></div></div>
+      <div class="focus"><span>Today's focus</span><b>DSA → DBMS → HR</b><div class="meter"><i id="heroMeter"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <div class="section-head"><div><span class="eyebrow">WHY THIS PROJECT</span><h2>Built around the way students actually prepare.</h2></div><p>Instead of jumping between apps, notes and random questions, the coach brings preparation, feedback and interview practice into one flow.</p></div>
+  <div class="feature-grid">
+    <article class="feature"><span class="icon">◎</span><h3>Practice Arena</h3><p>Topic-wise questions with instant explanations and accuracy tracking.</p></article>
+    <article class="feature"><span class="icon">◈</span><h3>Interview Coach</h3><p>Java, DSA and HR interview prompts with structured answer feedback.</p></article>
+    <article class="feature"><span class="icon">↗</span><h3>Readiness Tracking</h3><p>Turn practice activity into a simple placement-readiness signal.</p></article>
+    <article class="feature"><span class="icon">✦</span><h3>Personalized Next Step</h3><p>Use performance to identify weak areas and decide what to practice next.</p></article>
+  </div>
+</section>
+
+<section id="practice" class="section">
+  <div class="section-head"><div><span class="eyebrow">01 · PRACTICE</span><h2>Practice Arena</h2></div><p>Choose a skill. Answer a question. Get immediate feedback. Your browser stores the demo score locally.</p></div>
+  <div class="topics">
+    <button data-topic="Aptitude"><span>01</span><b>Aptitude</b><small>Quantitative · Verbal</small></button>
+    <button data-topic="DSA"><span>02</span><b>DSA</b><small>Algorithms · Data structures</small></button>
+    <button data-topic="DBMS"><span>03</span><b>DBMS</b><small>SQL · Database concepts</small></button>
+    <button data-topic="OOP"><span>04</span><b>OOP / Java</b><small>Core Java · OOP concepts</small></button>
+  </div>
+  <div class="practice-layout">
+    <div class="card question-card">
+      <div class="card-top"><span class="tag" id="tag">READY</span><span id="qcount">Pick a topic</span></div>
+      <h3 id="question">Select a topic above to begin your placement practice.</h3>
+      <div id="options"></div>
+      <div class="question-bottom"><p id="feedback"></p><button id="next" class="primary" hidden>Next question →</button></div>
+    </div>
+    <aside class="card recommendation"><span class="eyebrow">COACH INSIGHT</span><h3 id="insightTitle">Start with a skill</h3><p id="insight">Your coach will highlight a next step after you answer questions.</p><div class="skill"><span>Aptitude</span><i><em id="skillA"></em></i></div><div class="skill"><span>DSA</span><i><em id="skillD"></em></i></div><div class="skill"><span>DBMS</span><i><em id="skillB"></em></i></div><div class="skill"><span>OOP</span><i><em id="skillO"></em></i></div></aside>
+  </div>
+</section>
+
+<section id="interview" class="section">
+  <div class="section-head"><div><span class="eyebrow">02 · INTERVIEW</span><h2>AI Interview Coach</h2></div><p>Pick a track and practice answering like you would in a real placement interview.</p></div>
+  <div class="interview-layout">
+    <div class="card chat-card"><div class="chat-head"><div class="avatar">AI</div><div><b>Placement Coach</b><small>Structured interview practice</small></div><span class="status">● Ready</span></div><div id="chat"><p class="bubble bot">Hi! Choose Java, DSA or HR. I’ll give you a placement-style question and a simple structure for answering it.</p></div><div class="prompts"><button data-p="Java">Java</button><button data-p="DSA">DSA</button><button data-p="HR">HR</button></div><form id="form"><input id="input" autocomplete="off" placeholder="Type your answer or ask for a question…"><button class="primary">Send</button></form></div>
+    <aside class="card rubric"><span class="eyebrow">ANSWER FRAMEWORK</span><h3>Make every answer clear.</h3><div><b>01 · Concept</b><p>Start with the definition or main idea.</p></div><div><b>02 · Example</b><p>Connect it to a project or simple example.</p></div><div><b>03 · Result</b><p>Finish with impact, trade-off or learning.</p></div><div class="demo-note">⚡ Demo mode: interview responses are rule-based in this prototype. A secure AI backend can be connected later.</div></aside>
+  </div>
+</section>
+
+<section id="how" class="section how">
+  <div class="section-head"><div><span class="eyebrow">03 · SOLUTION</span><h2>How the system works</h2></div><p>A simple architecture that can grow from a hackathon prototype into a real placement platform.</p></div>
+  <div class="steps"><div><span>01</span><b>Assess</b><p>Students practice topic-wise questions and interview prompts.</p></div><div><span>02</span><b>Analyze</b><p>Scores and answer patterns reveal strengths and weak areas.</p></div><div><span>03</span><b>Recommend</b><p>The coach suggests the next topic or interview track.</p></div><div><span>04</span><b>Improve</b><p>Students repeat the cycle and build placement readiness.</p></div></div>
+</section>
+</main>
+
+<footer><div><b>✦ AI Placement Coach</b><span>HACKATHON-2026 · Built for smarter placement preparation.</span></div><span>Prototype · No API key required</span></footer>
+<script src="app.js"></script>
+</body></html>
